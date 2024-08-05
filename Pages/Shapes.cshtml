@@ -1,0 +1,17 @@
+﻿@page
+@using MyAnimalsAndShapesApp.Services
+@model ShapesModel
+@inject IShapeRepository ShapeRepository
+
+@{
+    ViewData["Title"] = "Shapes";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<ul>
+    @foreach (var shape in Model.Shapes)
+    {
+        <li>@shape.Name: @shape.Draw()</li>
+    }
+</ul>

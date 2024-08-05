@@ -1,0 +1,12 @@
+﻿@page
+@using MyAnimalsAndShapesApp.Services
+@model IndexModel
+@inject IOutputService OutputService
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>Welcome to the Animals and Shapes App</h1>
+
+<p>Check out our <a asp-page="/Animals">Animals</a> and <a asp-page="/Shapes">Shapes</a> pages.</p>

@@ -1,0 +1,17 @@
+﻿@page
+@using MyAnimalsAndShapesApp.Services
+@model AnimalsModel
+@inject IAnimalRepository AnimalRepository
+
+@{
+    ViewData["Title"] = "Animals";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<ul>
+    @foreach (var animal in Model.Animals)
+    {
+        <li>@animal.Name: @animal.Sound()</li>
+    }
+</ul>
